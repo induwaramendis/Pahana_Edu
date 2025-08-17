@@ -11,7 +11,11 @@ import java.io.IOException;
 @WebServlet("/CalculateBillServlet")
 public class CalculateBillServlet extends HttpServlet {
 
-    private static final double UNIT_RATE = 50.0; // LKR per unit
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final double UNIT_RATE = 50.0; // LKR per unit
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

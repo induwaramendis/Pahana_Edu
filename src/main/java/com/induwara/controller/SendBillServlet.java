@@ -14,7 +14,11 @@ import java.net.URLEncoder;
 @WebServlet("/SendBillServlet")
 public class SendBillServlet extends HttpServlet {
 
-    private static final String API_KEY = "rcphemkznnqweisw"; // 🔐 Replace this with your actual TextLocal API key
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final String API_KEY = "rcphemkznnqweisw"; // 🔐 Replace this with your actual TextLocal API key
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String phone = request.getParameter("phone");
@@ -49,7 +53,8 @@ public class SendBillServlet extends HttpServlet {
         request.getRequestDispatcher("bill-summary.jsp").forward(request, response);
     }
 
-    private void sendSMS(String phoneNumber, String message) throws Exception {
+    @SuppressWarnings("deprecation")
+	private void sendSMS(String phoneNumber, String message) throws Exception {
         String encodedMessage = URLEncoder.encode(message, "UTF-8");
 
         String data = "apikey=" + API_KEY
