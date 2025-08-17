@@ -82,7 +82,7 @@
         <input type="hidden" name="phone" value="<%= request.getAttribute("customerPhone") %>">
         <input type="hidden" name="email" value="<%= request.getAttribute("customerEmail") %>">
         <input type="hidden" name="total" value="<%= total %>">
-
+  <!--  Updated as part of Email-bill-improvements branch-->
         <% for (Item item : selectedItems) { %>
             <input type="hidden" name="itemName" value="<%= item.getItemName() %>" />
             <input type="hidden" name="quantity" value="<%= item.getQuantity() %>" />

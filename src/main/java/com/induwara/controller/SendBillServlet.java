@@ -40,7 +40,7 @@ public class SendBillServlet extends HttpServlet {
 				content.append("<h3>Thank you for your purchase!</h3>");
 				content.append("<p>Your total bill is: <strong>Rs. ").append(total).append("</strong></p>");
 
-				// Table of purchased items
+				// Table of purchased items in email
 				if (itemNames != null && quantities != null && prices != null && itemNames.length > 0) {
 					content.append("<h4>Purchased Items:</h4>")
 						   .append("<table border='1' cellpadding='5' cellspacing='0'>")
