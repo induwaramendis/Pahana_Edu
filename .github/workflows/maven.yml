@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Java CI Without Maven
 
 on:
   push:
@@ -20,6 +20,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Build with Maven
-      run: mvn clean install
-      
+    - name: Compile Java files
+      run: |
+        find . -name "*.java" > sources.txt
+        javac @sources.txt
